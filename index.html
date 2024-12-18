@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="superior">
+    </div>
+    <div class="cuadro-dialogo" id="cuadro-dialogo">
+        <div>
+            <h1 class=" ">Guadalupe Estefania <span>(😆)</span></h1>
+            <p>¿Confirmas la ultima date del año el Jueves?</p>
+            <div class="buttons">
+                <button id="btnSi">Si</button>
+                <button id="btnNo" disabled>No</button>
+            </div>
+        </div>
+    </div>
+    <div class="inferior">
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="rod">
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+            </div>
+        </div>
+        
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="rod">
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+            </div>
+        </div>
+        
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="rod">
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+                <div class="spike"></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="form addModal">
+        <form class="contact-form">
+            <p class="form-title">Unas preguntas antes de confirmar</p>
+            <fieldset>
+            <legend>Selecciona uno:</legend>
+                <div>
+                    <input type="radio" id="TChoice1" name="tchoice" value="Kranky" />
+                    <label for="TChoice1">Kranky</label>
+                    <input type="radio" id="TChoice2" name="tchoice" value="Bombones" />
+                    <label for="TChoice2">Bombones</label>
+                    <input type="radio" id="TChoice3" name="tchoice" value="M&M" />
+                    <label for="TChoice3">M&M</label>
+                    <input type="radio" id="TChoice4" name="tchoice" value="Mazapan" />
+                    <label for="TChoice4">Mazapan</label>
+                    <input type="radio" id="TChoice5" name="tchoice" value="Nuez" />
+                    <label for="TChoice5">Nuez</label>
+                </div>
+            </fieldset>
+            <fieldset>
+            <legend>Selecciona uno:</legend>
+                <div>
+                    <input type="radio" id="CChoice1" name="cchoice" value="Lechera" />
+                    <label for="CChoice1">Lechera</label>
+                    <input type="radio" id="CChoice2" name="cchoice" value="Nutella" />
+                    <label for="CChoice2">Nutella</label>
+                    <input type="radio" id="CChoice3" name="cchoice" value="Jalea de Fresa" />
+                    <label for="CChoice3">Jalea de Fresa</label>
+                    <input type="radio" id="CChoice4" name="cchoice" value="Hershey" />
+                    <label for="CChoice4">Hershey</label>
+                </div>
+            </fieldset>
+            <textarea style="margin-top: 10px;" minlength="0" maxlength="255" name="comments"cols="70" rows="10" placeholder="¿Quieres comentar algo? 👀" title="The message must be a minimum of 10 characters" required data-patter="^.{1,255}$"></textarea>
+            <button type="submit" class="btn formBTN" id="btn_send">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

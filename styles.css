@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #21324C;
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+}
+.cuadro-dialogo{
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.superior{
+    width: 100%;
+    height: 20%;
+}
+.inferior{
+    width: 100%;
+    height: 30%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.subtittle{
+    font-size: 20px;
+}
+
+#btnNo{
+    position: relative;
+    transition: transform 0.1s ease-in-out;
+}
+
+#btnSi:hover{
+    background: rgb(255, 178, 191);
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+#btnSi{
+    background: #fccad2;
+    
+}
+
+span{
+    font-size: 15px;
+}
+button {
+    width: 150px;
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+#btnSi:active {
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+.form{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    backdrop-filter: blur(10px);
+}
+.addModal{display: none;}
+.contact-form{
+    background-color: #fcfcfc;
+    color: rgb(15, 15, 15);
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px rgb(15, 15, 15);
+}
+
+fieldset{
+    width: 60%;
+}
+.form-title{font-size: 30px;}
+.formBTN{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.flower {
+	position: relative;
+	top: -80px;
+	left: -20px;
+}
+
+.flower:nth-of-type(2) {
+	left: -80px;
+	top: -19px;
+	transform: scale(.7);
+}
+
+.flower:nth-of-type(3) {
+	left: 55px;
+	top: -19px;
+	transform: scale(.7);
+}
+
+.flower .petal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #d52d58;
+	border-radius: 0px 30px 0px 30px;
+	width: 30px;
+	height: 60px;
+}
+
+.flower .petal:nth-child(1) {
+	left:-10px;
+	transform: rotate(-10deg);
+	transform-origin: bottom right;
+	background-color: #b81b43;
+	animation: openleft 3s ease-in infinite;
+	z-index: 5;
+}
+
+.flower .petal:nth-child(2) {
+	left:-10px;
+	background-color: #c9204b;
+	z-index: 4;
+
+}
+
+.flower .petal:nth-child(3) {
+	border-radius: 30px;
+	left: 5px;
+}
+
+.flower .petal:nth-child(4) {
+	border-radius: 30px 0px 30px 0px;
+	background-color: #c9204b;
+	left: 20px;
+	z-index: 4;
+}
+
+.flower .petal:nth-child(5) {
+	border-radius: 30px 0px 30px 0px;
+	left: 20px;
+	transform: rotate(10deg);
+	transform-origin: bottom left;
+	animation: openright 3s ease-in infinite;
+	background-color: #b81b43;
+	z-index: 5;
+}
+
+.flower .rod {
+	background-color: #329932;
+	width: 5px;
+	height: 150px;
+	position: absolute;
+	left: 17.5px;
+	top: 58px;
+	z-index: -1;
+}
+
+.flower .rod::before{
+	background-color: lightgreen;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	width: 20px;
+	height: 8px;
+	margin-left:-8px;
+}
+
+.flower .rod .spike {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 20px;
+	left: -10px;
+	border-color: transparent #329932 transparent transparent;
+	border-style: solid;
+	border-width: 5px;
+}
+
+.flower .rod .spike:nth-child(2) {
+	top: 50px;
+	left: 4px;
+	border-color: transparent transparent transparent #329932;
+}
+
+.flower .rod .spike:nth-child(3) {
+	top: 80px;
+}
+
+.flower .rod .spike:nth-child(4) {
+	top: 110px;
+	left: 4px;
+	border-color: transparent transparent transparent #329932;
+}
+
+@keyframes openleft {
+	20%, 80% {
+		transform: rotate(-20deg);
+	}
+}
+
+@keyframes openright {
+	20%, 80% {
+		transform: rotate(20deg);
+	}
+}
+
+.disabledSpinner{display: none;}
+.lds-roller {
+    /* change color here */
+    color: #1c4c5b
+  }
+  .lds-roller,
+  .lds-roller div,
+  .lds-roller div:after {
+    box-sizing: border-box;
+  }
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7.2px;
+    height: 7.2px;
+    border-radius: 50%;
+    background: currentColor;
+    margin: -3.6px 0 0 -3.6px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 62.62742px;
+    left: 62.62742px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 67.71281px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 70.90963px;
+    left: 48.28221px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 70.90963px;
+    left: 31.71779px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 67.71281px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 62.62742px;
+    left: 17.37258px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12.28719px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
